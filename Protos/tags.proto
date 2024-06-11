@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "OrbitgRPCClient";
+
+package tags;
+
+// The greeting service definition.
+service Tags {
+  // Returns a Tag   
+  rpc GetTag (TagRequest) returns (TagResponse);
+}
+
+// The request message containing the Tag Id
+message TagRequest {
+  string tagId = 1;
+}
+
+// The response message containing the result.
+message TagResponse {
+	string tagNo = 1;
+}
